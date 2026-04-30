@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shereen Ashraf Ali — Social Media Strategist & Digital Marketing Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+/* ─────────────────────────────────────────────────────────────
+   CUSTOM CURSOR
+───────────────────────────────────────────────────────────── */
+.cursor-dot,.cursor-ring{
+  position:fixed;top:0;left:0;
+  border-radius:50%;pointer-events:none;
+  z-index:9999;transform:translate(-50%,-50%);
+  mix-blend-mode:difference;
+}
+.cursor-dot{
+  width:5px;height:5px;
+  background:var(--champagne);
+  transition:transform .1s ease,opacity .3s;
+}
+.cursor-ring{
+  width:38px;height:38px;
+  border:.5px solid rgba(196,144,40,.55);
+  transition:transform .18s cubic-bezier(.25,.46,.45,.94),
+             width .25s ease,height .25s ease,
+             border-color .25s,opacity .3s;
+}
+body:hover .cursor-dot{opacity:1}
+body:not(:hover) .cursor-dot{opacity:0}
+.cursor-ring.hover{
+  width:60px;height:60px;
+  border-color:var(--gold);
+}
+@media(hover:none){.cursor-dot,.cursor-ring{display:none}}
+
+/* ─────────────────────────────────────────────────────────────
+   NOISE GRAIN OVERLAY
+───────────────────────────────────────────────────────────── */
+body::after{
+  content:'';
+  position:fixed;inset:0;
+  z-index:9998;
+  pointer-events:none;
+  opacity:.028;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:180px;
+}
+</style>
+<style>
+/* ============================================================
+   ROOT & RESET
+   Cartier-inspired: deep burgundy · antique gold · dusty rose
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* Backgrounds */
+  --void:#05030A;
+  --deep:#0C0812;
+  --shadow:#130D18;
+  --hollow:#1A111D;
+
+  /* Burgundy */
+  --burg:#5C0A1C;
+  --burg2:#7A1228;
+  --burg3:#9B2038;
+
+  /* Gold */
+  --gold:#C08B22;
+  --gold-warm:#A8721A;
+  --gold-light:#D4A84A;
+  --champagne:#EAD49A;
+
+  /* Dusty rose */
+  --rose:#B8868A;
+  --rose2:#CDA8A4;
+
+  /* Ivory */
+  --ivory:#F4EAD4;
+  --parch:#E8DEC6;
+  --parch2:#D8CCAF;
+
+  /* Text */
+  --ink:#180E0C;
+  --ink2:#443638;
+
+  /* 8-pt spacing */
+  --s1:.5rem;--s2:1rem;--s3:1.5rem;--s4:2rem;
+  --s5:3rem;--s6:4.5rem;--s7:6rem;--s8:8rem;--s9:10rem;
+  --mw:1280px;--side:5.5%;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  overflow-x:hidden;
+  line-height:1.68;
+  font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--burg);color:var(--champagne)}
+
+/* ── PAGE SYSTEM ── */
+.page{display:none}
+.page.active{display:block}
+
+/* ── NAV ── */
+.site-nav{
+  position:fixed;top:0;left:0;right:0;
+  z-index:900;
+  padding:1.4rem 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .45s,padding .45s,border-color .45s;
+  border-bottom:1px solid transparent;
+}
+.site-nav.stuck{
+  background:rgba(8,5,9,.97);
+  backdrop-filter:blur(18px);
+  padding:.9rem 5%;
+  border-bottom:1px solid rgba(196,144,40,.12);
+}
+.nav-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-weight:400;
+  letter-spacing:.06em;
+  color:var(--ivory);
+  text-decoration:none;cursor:pointer;
+  user-select:none;
+}
+.nav-brand em{font-style:normal;color:var(--gold)}
+.nav-menu{display:flex;align-items:center;gap:2.4rem}
+.nav-menu a,
+.nav-menu button{
+  font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(245,236,215,.55);
+  text-decoration:none;background:none;border:none;
+  font-family:'DM Sans',sans-serif;font-weight:300;
+  cursor:pointer;transition:color .25s;padding:0;
+}
+.nav-menu a:hover,
+.nav-menu button:hover{color:var(--gold)}
+.nav-cta{
+  background:var(--gold)!important;
+  color:var(--void)!important;
+  font-size:.71rem!important;font-weight:500!important;
+  letter-spacing:.1em!important;
+  padding:.5rem 1.5rem;border-radius:1px;
+  transition:background .25s,transform .2s;
+  text-decoration:none;display:inline-block;
+}
+.nav-cta:hover{background:var(--gold-light)!important;transform:translateY(-1px)}
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.nav-burger span{display:block;width:20px;height:1px;background:var(--ivory);transition:all .3s}
+
+@media(max-width:800px){
+  .nav-menu{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    flex-direction:column;gap:0;
+    background:rgba(8,5,9,.99);
+    border-bottom:1px solid rgba(196,144,40,.12);
+    padding:.5rem 0;
+  }
+  .nav-menu.open{display:flex}
+  .nav-menu a,
+  .nav-menu button{
+    display:block;width:100%;padding:.85rem 5%;
+    border-bottom:1px solid rgba(255,255,255,.04);
+    text-align:left;
+  }
+  .nav-cta{margin:.8rem 5%;display:block;text-align:center;width:auto}
+  .nav-burger{display:flex}
+}
+
+/* ── SHARED TOKENS ── */
+.tag{
+  font-size:.67rem;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);
+  display:flex;align-items:center;gap:.75rem;
+  margin-bottom:.9rem;
+}
+.tag::before{content:'';display:block;width:18px;height:.5px;background:var(--gold)}
+.tag-c{justify-content:center}
+.tag-c::before,.tag-c::after{content:'';display:block;width:18px;height:.5px;background:var(--gold)}
+.h1s{
+  font-family:'Cormorant Garamond',serif;
+  font-weight:300;line-height:1.04;
+}
+.h2s{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.1rem,3.6vw,3.2rem);
+  font-weight:300;line-height:1.1;
+  color:var(--ink);
+  letter-spacing:-.01em;
+}
+.h2s-w{color:var(--ivory)}
+.rule{width:28px;height:.5px;background:var(--gold);margin:.9rem 0 2rem}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.reveal.vis{opacity:1;transform:none}
+.reveal:nth-child(2){transition-delay:.1s}
+.reveal:nth-child(3){transition-delay:.18s}
+.reveal:nth-child(4){transition-delay:.26s}
+.d-flex{display:flex}
+.gap-sm{gap:.7rem}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+#hero{
+  min-height:100vh;
+  background:var(--void);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:var(--s8) var(--side) var(--s7);
+}
+
+/* Ambient glow */
+#hero::before{
+  content:'';position:absolute;
+  top:-10%;right:-5%;
+  width:50vw;height:80vh;
+  background:radial-gradient(ellipse at top right,rgba(107,15,34,.28) 0%,transparent 65%);
+  pointer-events:none;
+}
+#hero::after{
+  content:'';position:absolute;
+  bottom:-15%;left:-5%;
+  width:40vw;height:60vh;
+  background:radial-gradient(ellipse at bottom left,rgba(196,144,40,.06) 0%,transparent 60%);
+  pointer-events:none;
+}
+
+/* Faint editorial background initials */
+.hero-mono{
+  position:absolute;right:-3rem;bottom:-5rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(18rem,36vw,38rem);
+  font-weight:600;font-style:italic;
+  color:rgba(107,15,34,.055);
+  line-height:1;pointer-events:none;user-select:none;
+  letter-spacing:-.04em;
+}
+
+.hero-inner{
+  display:grid;grid-template-columns:1.15fr 1fr;
+  gap:5rem;align-items:center;
+  max-width:1300px;margin:0 auto;width:100%;
+  position:relative;z-index:1;
+}
+
+/* Thin vertical separator */
+.hero-sep{
+  display:block;width:.5px;height:60px;
+  background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+  margin-bottom:1.8rem;
+}
+
+.hero-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(.9rem,1.1vw,1rem);
+  font-weight:400;letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--ivory);margin-bottom:.5rem;
+}
+.hero-role{
+  font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:2rem;
+}
+
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.2rem,6vw,5.6rem);
+  font-weight:300;line-height:1.04;
+  color:var(--ivory);margin-bottom:2rem;
+  letter-spacing:-.01em;
+}
+.h1-italic{font-style:italic;color:var(--champagne)}
+.h1-rose{color:var(--rose)}
+
+.hero-subline{
+  font-size:.88rem;font-weight:300;
+  color:rgba(245,236,215,.5);
+  line-height:1.9;max-width:460px;
+  margin-bottom:2.6rem;
+}
+.hero-authority-line{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;font-weight:300;font-style:italic;
+  color:rgba(245,236,215,.38);
+  margin-bottom:1.4rem;letter-spacing:.02em;
+}
+
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+.btn-p{
+  background:var(--gold);color:var(--void);
+  font-size:.74rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  padding:.9rem 2.1rem;border-radius:1px;
+  text-decoration:none;display:inline-block;
+  transition:all .3s;cursor:pointer;border:none;
+  font-family:'DM Sans',sans-serif;
+}
+.btn-p{position:relative;overflow:hidden}
+.btn-p::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.18) 50%,transparent 70%);transform:translateX(-100%);transition:transform .55s ease}
+.btn-p:hover::after{transform:translateX(100%)}
+.btn-p:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(192,139,34,.3)}
+.btn-o{
+  border:.5px solid rgba(245,236,215,.22);
+  color:rgba(245,236,215,.7);
+  font-size:.74rem;font-weight:300;letter-spacing:.09em;text-transform:uppercase;
+  padding:.9rem 2.1rem;border-radius:1px;
+  text-decoration:none;display:inline-block;
+  transition:all .3s;cursor:pointer;background:none;
+  font-family:'DM Sans',sans-serif;
+}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+
+/* KPI strip in hero */
+.hero-kpi-row{
+  display:flex;gap:.5px;
+  background:rgba(196,144,40,.08);
+  border:.5px solid rgba(196,144,40,.12);
+  border-radius:1px;overflow:hidden;
+}
+.hk{
+  flex:1;padding:1rem 1.1rem;
+  background:rgba(8,5,9,.6);
+  position:relative;transition:background .3s;
+}
+.hk:hover{background:rgba(107,15,34,.18)}
+.hk::before{
+  content:'';position:absolute;top:0;left:0;
+  width:100%;height:.5px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+}
+.hk-v{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:300;color:var(--gold);line-height:1;
+  text-shadow:0 0 28px rgba(192,139,34,.35);
+}
+.hk-l{
+  font-size:.63rem;color:rgba(245,236,215,.35);
+  letter-spacing:.05em;margin-top:.25rem;line-height:1.45;
+}
+
+/* Hero right: badge + credentials */
+.hero-right{display:flex;flex-direction:column;gap:1.2rem}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.55rem;
+  background:rgba(107,15,34,.2);
+  border:.5px solid rgba(166,42,64,.3);
+  color:rgba(237,216,160,.7);
+  font-size:.67rem;letter-spacing:.12em;text-transform:uppercase;
+  padding:.45rem 1rem;border-radius:1px;align-self:flex-start;
+}
+.hero-badge::before{content:'✦';font-size:.55rem;color:var(--gold)}
+
+.hero-stat{
+  background:rgba(255,255,255,.02);
+  border:.5px solid rgba(196,144,40,.14);
+  border-radius:1px;padding:1.4rem 1.6rem;
+  position:relative;overflow:hidden;
+  transition:background .3s;
+}
+.hero-stat:hover{background:rgba(107,15,34,.12)}
+.hero-stat::after{
+  content:'';position:absolute;left:0;top:15%;bottom:15%;
+  width:.5px;background:var(--gold);
+}
+.stat-n{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.3rem;font-weight:300;color:var(--gold);line-height:1;
+}
+.stat-l{
+  font-size:.68rem;color:rgba(245,236,215,.38);
+  letter-spacing:.05em;margin-top:.3rem;line-height:1.5;
+}
+
+@media(max-width:920px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-right{flex-direction:row;flex-wrap:wrap}
+  .hero-stat{flex:1;min-width:140px}
+  .hero-mono{display:none}
+}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+#about{padding:var(--s9) var(--side);background:var(--ivory)}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1.2fr;
+  gap:7rem;align-items:start;
+  max-width:var(--mw);margin:0 auto;
+}
+
+/* Pull quote block */
+.about-left{}
+.about-pull-wrap{
+  position:relative;
+  padding:2.2rem 2rem 2.2rem 2.5rem;
+  border-left:.5px solid var(--burg);
+  background:linear-gradient(135deg,rgba(107,15,34,.04),transparent);
+  margin-bottom:2.5rem;
+}
+.about-pull-wrap::before{
+  content:'\201C';
+  font-family:'Cormorant Garamond',serif;
+  font-size:7rem;font-weight:600;
+  color:rgba(107,15,34,.08);
+  position:absolute;top:-1.5rem;left:.8rem;
+  line-height:1;
+}
+.about-pull{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.6rem,2.5vw,2.1rem);
+  font-weight:300;font-style:italic;
+  line-height:1.58;color:var(--ink);
+  position:relative;z-index:1;
+  letter-spacing:-.01em;
+}
+.about-pull strong{color:var(--burg);font-style:normal;font-weight:400}
+
+.about-stats{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:.5px;background:var(--parch2);
+  border:.5px solid var(--parch2);
+  border-radius:1px;overflow:hidden;
+}
+.ast{background:var(--ivory);padding:1.3rem 1.5rem;transition:background .25s}
+.ast:hover{background:#fff}
+.ast-v{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;font-weight:300;color:var(--burg);
+}
+.ast-l{font-size:.7rem;letter-spacing:.05em;color:var(--ink2);opacity:.7;margin-top:.2rem}
+
+/* Story */
+.about-story .h2s{margin-bottom:1.5rem;line-height:1.1}
+.about-story p{
+  font-size:.9rem;font-weight:300;
+  line-height:1.94;color:var(--ink2);
+  margin-bottom:1rem;
+}
+
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:3.5rem}}
+
+/* ============================================================
+   WHY STRIP
+   ============================================================ */
+#why{padding:0;background:var(--void)}
+.why-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:.5px solid rgba(196,144,40,.1);
+  border-bottom:.5px solid rgba(196,144,40,.1);
+}
+.wi{
+  padding:2.8rem 2rem;text-align:center;
+  position:relative;transition:background .3s;
+}
+.wi+.wi{border-left:.5px solid rgba(196,144,40,.08)}
+.wi:hover{background:rgba(107,15,34,.14)}
+.wi::after{
+  content:'';position:absolute;bottom:0;left:50%;
+  transform:translateX(-50%) scaleX(0);
+  width:30px;height:.5px;background:var(--gold);
+  transition:transform .3s;
+}
+.wi:hover::after{transform:translateX(-50%) scaleX(1)}
+.wi-ico{
+  width:32px;height:32px;margin:0 auto 1rem;
+  border:.5px solid rgba(196,144,40,.28);
+  display:flex;align-items:center;justify-content:center;
+}
+.wi-ico svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.wi-t{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-weight:400;color:var(--ivory);margin-bottom:.4rem;
+}
+.wi-d{font-size:.75rem;font-weight:300;color:rgba(245,236,215,.33);line-height:1.7}
+@media(max-width:860px){.why-inner{grid-template-columns:1fr 1fr}}
+@media(max-width:460px){.why-inner{grid-template-columns:1fr}}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+#services{padding:var(--s9) var(--side);background:var(--shadow)}
+.sv-wrap{max-width:1300px;margin:0 auto}
+.sv-head{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:3rem;align-items:end;margin-bottom:4.5rem;
+}
+.sv-intro{
+  font-size:.86rem;font-weight:300;
+  color:rgba(245,236,215,.4);line-height:1.92;max-width:380px;
+}
+.sv-grid{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:.5px;background:rgba(245,236,215,.03);
+  border:.5px solid rgba(196,144,40,.08);
+}
+.sc{
+  background:var(--deep);padding:2.8rem;
+  position:relative;transition:background .3s,transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;overflow:hidden;
+}
+.sc::before{
+  content:'';position:absolute;top:0;left:0;right:0;
+  height:.5px;
+  background:linear-gradient(to right,transparent,rgba(196,144,40,.18),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.sc:hover{background:var(--hollow);transform:translateY(-3px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.sc:hover::before{opacity:1}
+.sc-num{
+  position:absolute;top:1.6rem;right:2rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:.8rem;color:rgba(196,144,40,.15);
+  letter-spacing:.1em;
+}
+.sc-ico{
+  width:36px;height:36px;
+  border:.5px solid rgba(196,144,40,.25);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.4rem;
+}
+.sc-ico svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.sc-t{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.28rem;font-weight:400;color:var(--ivory);margin-bottom:.7rem;
+}
+.sc-d{font-size:.81rem;font-weight:300;color:rgba(245,236,215,.4);line-height:1.86}
+.sc-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:1.1rem}
+.sc-tag{
+  font-size:.65rem;letter-spacing:.06em;
+  color:var(--gold);
+  border:.5px solid rgba(196,144,40,.18);
+  padding:.2rem .62rem;
+}
+@media(max-width:860px){.sv-head{grid-template-columns:1fr}.sv-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   EXPERIENCE — Editorial Style
+   ============================================================ */
+#experience{padding:var(--s9) var(--side);background:var(--ivory)}
+.ex-wrap{max-width:1300px;margin:0 auto}
+.ex-list{margin-top:3.5rem}
+.ex-row{
+  display:grid;grid-template-columns:1px 180px 1fr;
+  gap:0 3rem;align-items:start;
+  padding:2.8rem 0;
+  border-bottom:.5px solid var(--parch2);
+  position:relative;
+  transition:padding-left .3s ease;
+}
+.ex-row:first-child{border-top:.5px solid var(--parch2)}
+.ex-row:hover{padding-left:.8rem}
+
+/* The thin gold vertical line */
+.ex-line{
+  width:.5px;
+  background:linear-gradient(to bottom,var(--gold),transparent);
+  align-self:stretch;
+  opacity:.3;
+}
+.ex-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.72rem;letter-spacing:.12em;
+  color:var(--gold);text-transform:uppercase;
+  padding-top:.2rem;
+}
+.ex-co{font-size:.8rem;font-weight:400;color:var(--ink2);margin-top:.3rem}
+.ex-mkt{font-size:.68rem;color:var(--rose);letter-spacing:.04em;margin-top:.2rem}
+.ex-role{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.2rem;font-weight:400;color:var(--ink);margin-bottom:.65rem;
+}
+.ex-d{font-size:.83rem;font-weight:300;color:var(--ink2);line-height:1.9}
+.ex-chips{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.chip{
+  font-size:.67rem;letter-spacing:.04em;
+  color:var(--burg2);
+  background:rgba(107,15,34,.07);
+  border:.5px solid rgba(107,15,34,.16);
+  padding:.2rem .7rem;font-weight:400;
+}
+@media(max-width:800px){
+  .ex-row{grid-template-columns:1fr;gap:.5rem;padding:2rem 0}
+  .ex-line{display:none}
+}
+
+/* ============================================================
+   PORTFOLIO TEASER
+   ============================================================ */
+#portfolio-teaser{padding:var(--s9) var(--side);background:var(--void)}
+.pt-wrap{max-width:1300px;margin:0 auto}
+
+.pt-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:.5px;
+  background:rgba(245,236,215,.03);
+  border:.5px solid rgba(196,144,40,.08);
+  margin-top:3.5rem;
+}
+.pc{
+  background:var(--deep);padding:2.4rem;
+  position:relative;overflow:hidden;
+  cursor:pointer;transition:background .3s,transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s;
+}
+.pc:hover{background:var(--shadow);transform:translateY(-4px);box-shadow:0 24px 64px rgba(0,0,0,.45)}
+.pc::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;
+  height:.5px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+  opacity:0;transition:opacity .3s;
+}
+.pc:hover::after{opacity:1}
+.pc-l{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.pc-t{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:400;color:var(--ivory);
+  line-height:1.3;margin-bottom:.85rem;
+}
+.pc-d{font-size:.78rem;font-weight:300;color:rgba(245,236,215,.38);line-height:1.8;margin-bottom:1.1rem}
+.pc-kpis{display:flex;flex-direction:column;gap:.3rem}
+.kp{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.4rem 0;border-top:.5px solid rgba(245,236,215,.04);
+}
+.kp:first-child{border-top:none;padding-top:0}
+.kp-l{font-size:.67rem;color:rgba(245,236,215,.3);letter-spacing:.04em}
+.kp-v{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--gold);text-shadow:0 0 20px rgba(192,139,34,.3)}
+.pc-bg{
+  position:absolute;bottom:.8rem;right:1.2rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:5rem;font-weight:300;
+  color:rgba(245,236,215,.018);line-height:1;
+}
+.pfeat{grid-column:span 2}
+.pt-cta{text-align:center;margin-top:3rem}
+@media(max-width:1000px){.pt-grid{grid-template-columns:1fr 1fr}.pfeat{grid-column:span 1}}
+@media(max-width:580px){.pt-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
+#skills{padding:var(--s9) var(--side);background:var(--ivory)}
+.sk-wrap{max-width:1300px;margin:0 auto}
+.sk-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:var(--parch2);
+  border:.5px solid var(--parch2);
+  margin-top:3.5rem;
+}
+.sg{
+  background:var(--ivory);padding:2rem 1.8rem;
+  transition:background .3s,transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;
+}
+.sg:hover{background:#fff;transform:translateY(-3px);box-shadow:0 12px 40px rgba(24,14,12,.08)}
+.sg-t{
+  font-size:.67rem;letter-spacing:.17em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.1rem;
+  padding-bottom:.75rem;border-bottom:.5px solid var(--parch2);
+}
+.sg-l{display:flex;flex-direction:column;gap:.48rem}
+.si{
+  font-size:.8rem;font-weight:300;color:var(--ink2);
+  display:flex;align-items:center;gap:.5rem;
+}
+.si::before{
+  content:'';display:block;
+  width:3px;height:3px;
+  background:var(--burg);border-radius:50%;flex-shrink:0;
+}
+.certs{
+  display:flex;flex-wrap:wrap;gap:.45rem;
+  margin-top:2.5rem;
+}
+.cert{
+  font-size:.71rem;letter-spacing:.03em;color:var(--ink2);
+  background:transparent;
+  padding:.36rem .9rem;
+  border:.5px solid var(--parch2);
+  transition:border-color .25s,color .25s;
+}
+.cert:hover{border-color:var(--gold);color:var(--gold)}
+@media(max-width:1000px){.sk-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.sk-grid{grid-template-columns:1fr}}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+#contact{
+  padding:var(--s9) var(--side);
+  background:var(--void);
+  text-align:center;
+  position:relative;overflow:hidden;
+}
+#contact::before{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:1px;height:80px;
+  background:linear-gradient(to bottom,transparent,var(--gold));
+}
+.ct-wrap{max-width:640px;margin:0 auto;position:relative;z-index:1}
+.ct-h{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.6rem,5.5vw,4.2rem);
+  font-weight:300;font-style:italic;
+  color:var(--ivory);
+  margin-bottom:1.2rem;line-height:1.12;
+  letter-spacing:-.01em;
+}
+.ct-sub{
+  font-size:.86rem;font-weight:300;
+  color:rgba(245,236,215,.38);
+  margin-bottom:2.5rem;line-height:1.88;
+}
+.ct-links{
+  display:flex;flex-direction:column;
+  gap:.65rem;align-items:center;margin-bottom:2.5rem;
+}
+.cl{
+  font-size:.82rem;color:rgba(245,236,215,.38);
+  text-decoration:none;
+  display:flex;align-items:center;gap:.55rem;
+  transition:color .25s;
+}
+.cl:hover{color:var(--gold)}
+.cl svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.5;flex-shrink:0}
+.ct-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn-gold{
+  background:var(--gold);color:var(--void);
+  font-size:.74rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;
+  padding:1rem 2.6rem;border-radius:1px;
+  text-decoration:none;display:inline-block;
+  transition:all .3s;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{
+  border:.5px solid rgba(245,236,215,.15);
+  color:rgba(245,236,215,.55);
+  font-size:.74rem;font-weight:300;letter-spacing:.09em;text-transform:uppercase;
+  padding:1rem 2.6rem;border-radius:1px;
+  text-decoration:none;display:inline-block;
+  transition:all .3s;background:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;
+}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ============================================================
+   FOOTER — Shiny full name
+   ============================================================ */
+footer{
+  background:var(--void);
+  border-top:.5px solid rgba(192,139,34,.1);
+  padding:2.6rem var(--side);
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:.8rem;
+}
+.footer-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;font-weight:400;
+  letter-spacing:.08em;
+  background:linear-gradient(
+    90deg,
+    var(--gold-warm) 0%,
+    var(--champagne) 28%,
+    var(--gold) 50%,
+    var(--champagne) 72%,
+    var(--gold-warm) 100%
+  );
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  animation:goldFlow 5s linear infinite;
+  cursor:pointer;
+}
+@keyframes goldFlow{to{background-position:200% center}}
+.footer-role{font-size:.67rem;letter-spacing:.08em;color:rgba(245,236,215,.18);text-transform:uppercase}
+.footer-nav{display:flex;gap:1.6rem}
+.footer-nav a,
+.footer-nav button{
+  font-size:.67rem;letter-spacing:.1em;
+  color:rgba(245,236,215,.22);text-decoration:none;
+  text-transform:uppercase;transition:color .25s;
+  cursor:pointer;background:none;border:none;
+  font-family:'DM Sans',sans-serif;padding:0;
+}
+.footer-nav a:hover,.footer-nav button:hover{color:var(--gold)}
+@media(max-width:600px){footer{flex-direction:column;gap:.7rem;text-align:center}.footer-nav{justify-content:center}}
+
+/* ============================================================
+   PORTFOLIO PAGE
+   ============================================================ */
+#portfolio-page{background:var(--void);min-height:100vh}
+
+.pp-nav{
+  position:sticky;top:0;z-index:800;
+  background:rgba(8,5,9,.98);
+  backdrop-filter:blur(18px);
+  border-bottom:.5px solid rgba(196,144,40,.1);
+  padding:.9rem 5%;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.pp-back{
+  display:flex;align-items:center;gap:.5rem;
+  font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;
+  color:rgba(245,236,215,.42);cursor:pointer;
+  transition:color .25s;background:none;border:none;
+  font-family:'DM Sans',sans-serif;padding:0;
+}
+.pp-back:hover{color:var(--gold)}
+.pp-back svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:1.8}
+.pp-brand{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.1rem;font-weight:400;
+  background:linear-gradient(90deg,var(--gold-warm),var(--champagne),var(--gold-warm));
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;animation:goldFlow 5s linear infinite;
+}
+.pp-pdf{
+  display:flex;align-items:center;gap:.45rem;
+  background:var(--gold);color:var(--void);
+  font-size:.69rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  padding:.46rem 1.15rem;
+  text-decoration:none;transition:background .25s;
+}
+.pp-pdf:hover{background:var(--gold-light)}
+.pp-pdf svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2}
+
+.pp-hero{
+  padding:5rem 5% 3.5rem;
+  text-align:center;
+  border-bottom:.5px solid rgba(196,144,40,.08);
+  position:relative;overflow:hidden;
+}
+.pp-hero::before{
+  content:'';position:absolute;
+  top:0;left:50%;transform:translateX(-50%);
+  width:1px;height:60px;
+  background:linear-gradient(to bottom,transparent,var(--gold));
+}
+.pp-hero-h{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.5rem,5.5vw,4.2rem);
+  font-weight:300;color:var(--ivory);
+  line-height:1.1;margin-bottom:.9rem;
+}
+.pp-hero-h em{font-style:italic;color:var(--champagne)}
+.pp-hero-sub{
+  font-size:.86rem;font-weight:300;
+  color:rgba(245,236,215,.38);
+  max-width:520px;margin:0 auto;line-height:1.88;
+}
+
+.pp-tag{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.55rem;
+  display:flex;align-items:center;gap:.65rem;
+}
+.pp-tag::before{content:'';display:block;width:14px;height:.5px;background:var(--gold)}
+.pp-h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem,2.8vw,2.4rem);
+  font-weight:300;color:var(--ivory);margin-bottom:.7rem;
+}
+
+.cs{
+  background:rgba(255,255,255,.025);
+  border:.5px solid rgba(196,144,40,.08);
+  transition:border-color .3s;
+}
+.cs:hover{border-color:rgba(196,144,40,.2)}
+.cs-hd{
+  padding:2rem 2.5rem 1.5rem;
+  border-bottom:.5px solid rgba(245,236,215,.04);
+  display:grid;grid-template-columns:1fr auto;
+  gap:2rem;align-items:start;
+}
+.cs-lbl{font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.45rem}
+.cs-title{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:400;color:var(--ivory);line-height:1.25}
+.cs-mkt{font-size:.72rem;color:rgba(245,236,215,.28);margin-top:.35rem}
+.cs-kpis{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:flex-end}
+.kb{
+  background:rgba(196,144,40,.07);
+  border:.5px solid rgba(196,144,40,.16);
+  padding:.55rem .9rem;text-align:center;min-width:80px;
+}
+.kb-v{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);line-height:1}
+.kb-l{font-size:.61rem;color:rgba(245,236,215,.28);margin-top:.2rem;letter-spacing:.04em}
+.cs-bd{padding:1.6rem 2.5rem}
+.cs-obj{font-size:.8rem;font-weight:400;color:var(--champagne);margin-bottom:.65rem;letter-spacing:.01em;opacity:.7}
+.cs-copy{font-size:.81rem;font-weight:300;color:rgba(245,236,215,.38);line-height:1.94;margin-bottom:1rem}
+.cs-tags{display:flex;flex-wrap:wrap;gap:.35rem}
+.cstag{font-size:.65rem;letter-spacing:.05em;color:var(--gold);border:.5px solid rgba(196,144,40,.16);padding:.18rem .6rem}
+
+@media(max-width:720px){.cs-hd{grid-template-columns:1fr}.cs-kpis{justify-content:flex-start}}
+
+.seo-2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(196,144,40,.06)}
+.seo-c{background:var(--deep);padding:1.8rem}
+.seo-t{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:400;color:var(--ivory);margin-bottom:.5rem}
+.seo-d{font-size:.79rem;font-weight:300;color:rgba(245,236,215,.38);line-height:1.86}
+@media(max-width:600px){.seo-2{grid-template-columns:1fr}}
+
+.reel-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(196,144,40,.06)}
+.reel-c{background:var(--deep);padding:1.6rem;text-align:center}
+.reel-ico{
+  width:34px;height:34px;
+  border:.5px solid rgba(196,144,40,.25);
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto .75rem;
+}
+.reel-ico svg{width:14px;height:14px;stroke:var(--gold);fill:none;stroke-width:1.5}
+.reel-l{font-size:.75rem;font-weight:300;color:rgba(245,236,215,.38);line-height:1.65}
+@media(max-width:580px){.reel-3{grid-template-columns:1fr 1fr}}
+
+.pp-cta-block{
+  background:var(--shadow);
+  border-top:.5px solid rgba(196,144,40,.1);
+  padding:4rem 5%;text-align:center;
+}
+.pp-cta-h{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.9rem;font-weight:300;font-style:italic;
+  color:var(--ivory);margin-bottom:.9rem;
+}
+.pp-cta-d{
+  font-size:.83rem;font-weight:300;
+  color:rgba(245,236,215,.35);margin-bottom:2rem;line-height:1.85;
+}
+.pp-cta-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* Layout helpers */
+.pad-s{padding:4rem 5% 0;max-width:1300px;margin:0 auto}
+.pad-b{padding:1.5rem 5%;max-width:1300px;margin:0 auto}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(196,144,40,.06)}
+@media(max-width:640px){.two-col{grid-template-columns:1fr}}
+</style>
+<style>
+/* CURSOR */
+.cursor-dot{position:fixed;top:0;left:0;width:5px;height:5px;background:#EAD49A;border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:opacity .3s}
+.cursor-ring{position:fixed;top:0;left:0;width:38px;height:38px;border:.5px solid rgba(192,139,34,.45);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .25s ease,height .25s ease,border-color .25s}
+.cursor-ring.hov{width:60px;height:60px;border-color:#C08B22}
+@media(hover:none){.cursor-dot,.cursor-ring{display:none}}
+/* GRAIN */
+.grain-layer{position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.026;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:160px}
+/* PROGRESS BAR */
+#prog{position:fixed;top:0;left:0;height:1.5px;background:linear-gradient(to right,#5C0A1C,#C08B22);z-index:9997;width:0;pointer-events:none}
+/* SELECTION */
+::selection{background:#5C0A1C;color:#EAD49A}
+/* SHIMMER on primary btn */
+.btn-p{position:relative;overflow:hidden}
+.btn-p::after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.16) 50%,transparent 70%);transform:translateX(-120%);transition:transform .55s ease}
+.btn-p:hover::after{transform:translateX(120%)}
+.btn-p:hover{box-shadow:0 8px 32px rgba(192,139,34,.28)}
+/* MAGNETIC hover shadow on gold btn */
+.btn-gold:hover{box-shadow:0 8px 32px rgba(192,139,34,.28)}
+/* SERVICE card hover lift */
+.sc{transition:background .3s,transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s}
+.sc:hover{transform:translateY(-4px)!important;box-shadow:0 22px 60px rgba(0,0,0,.45)}
+/* PORTFOLIO card lift */
+.pc{transition:background .3s,transform .32s cubic-bezier(.22,1,.36,1),box-shadow .32s}
+.pc:hover{transform:translateY(-5px)!important;box-shadow:0 26px 70px rgba(0,0,0,.5)}
+/* SKILL group lift */
+.sg{transition:background .3s,transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s}
+.sg:hover{transform:translateY(-3px)!important;box-shadow:0 12px 36px rgba(24,14,12,.09)!important}
+/* EXP row indent on hover */
+.ex-row{transition:padding-left .3s ease}
+.ex-row:hover{padding-left:.9rem}
+/* STAT card glow on hover */
+.hero-stat:hover .stat-n,.hk:hover .hk-v{text-shadow:0 0 30px rgba(192,139,34,.4)}
+/* HEADING letter-spacing */
+.h2s{letter-spacing:-.01em}
+.hero-h1{letter-spacing:-.015em}
+.ct-h{letter-spacing:-.01em}
+/* CONTACT glow */
+#contact::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:580px;height:580px;background:radial-gradient(ellipse,rgba(92,10,28,.2) 0%,transparent 70%);pointer-events:none;z-index:0}
+/* GOLD KPI glow */
+.kp-v,.hk-v,.stat-n,.ast-v{text-shadow:0 0 24px rgba(192,139,34,.28)}
+/* about stats hover */
+.ast{transition:background .25s,transform .25s}
+.ast:hover{transform:scale(1.02)}
+/* REVEAL timing curves */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .78s cubic-bezier(.22,1,.36,1)}
+.reveal.vis{opacity:1;transform:none}
+/* WHY STRIP padding increase */
+.wi{padding:3.2rem 2rem}
+/* CHIP hover */
+.chip{transition:background .2s,color .2s,border-color .2s}
+.chip:hover{background:rgba(122,18,40,.15);color:var(--burg3);border-color:rgba(122,18,40,.3)}
+/* CERT hover */
+.cert{cursor:default;transition:border-color .25s,color .25s}
+/* SERVICE tag hover */
+.sc-tag{transition:color .2s,border-color .2s}
+.sc-tag:hover{color:var(--champagne);border-color:rgba(196,144,40,.45)}
+/* about line thicker */
+.about-pull-wrap{border-left-width:1px}
+/* HERO separator taller */
+.hero-sep{height:72px}
+</style>
+</head>
+<body>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ── SINGLE NAV ── -->
+<nav class="site-nav" id="siteNav">
+  <span class="nav-brand" onclick="goMain()">Shereen<em>.</em></span>
+  <div class="nav-menu" id="navMenu">
+    <button onclick="goMain();goSec('about')">About</button>
+    <button onclick="goMain();goSec('services')">Services</button>
+    <button onclick="goPortfolio()">Portfolio</button>
+    <button onclick="goMain();goSec('skills')">Skills</button>
+    <a href="mailto:shereen.ashraf25@gmail.com" class="nav-cta">Hire Me</a>
+  </div>
+  <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     MAIN PAGE
+     ══════════════════════════════════════ -->
+<div id="main-page" class="page active">
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-mono">S</div>
+  <div class="hero-inner">
+
+    <!-- Left column -->
+    <div>
+      <span class="hero-sep"></span>
+      <p class="hero-name">Shereen Ashraf Ali</p>
+      <p class="hero-role">Social Media Strategist &nbsp;·&nbsp; SEO Content Writer &nbsp;·&nbsp; CIM Certified</p>
+
+      <h1 class="hero-h1 h1s">
+        Digital Authority,<br>
+        <span class="h1-italic">Built Deliberately</span><br>
+        <span class="h1-rose">Across Borders.</span>
+      </h1>
+
+      <p class="hero-authority-line">"I don't just manage accounts — I build digital authority."</p>
+
+      <p class="hero-subline">
+        8 years. 5 markets. Bilingual strategy in Arabic and English. 
+        From healthcare compliance in Australia to trilingual real estate campaigns 
+        across the Gulf and North Africa — every strategy I craft is designed to make 
+        brands unmissable in the markets that matter.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="mailto:shereen.ashraf25@gmail.com" class="btn-p">Let's Work Together</a>
+        <button class="btn-o" onclick="goPortfolio()">View My Work</button>
+      </div>
+
+      <div class="hero-kpi-row">
+        <div class="hk">
+          <div class="hk-v count-up" data-target="76.9" data-prefix="+" data-suffix="%">+76.9%</div>
+          <div class="hk-l">Total Reach Growth<br>Australia Healthcare</div>
+        </div>
+        <div class="hk">
+          <div class="hk-v count-up" data-target="114.3" data-prefix="+" data-suffix="%">+114.3%</div>
+          <div class="hk-l">Link Click Rate<br>Organic Only</div>
+        </div>
+        <div class="hk">
+          <div class="hk-v count-up" data-target="38.1" data-suffix="K">38.1K</div>
+          <div class="hk-l">Organic Reel Views<br>Zero Ad Spend</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column -->
+    <div class="hero-right">
+      <div class="hero-badge">CIM Diploma — Chartered Institute of Marketing, UK</div>
+      <div class="hero-stat">
+        <div class="stat-n count-up" data-target="90.9" data-prefix="+" data-suffix="%">+90.9%</div>
+        <div class="stat-l">Content Interactions — Australian Clinic Portfolio</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n count-up" data-target="5" data-suffix="+">5+</div>
+        <div class="stat-l">International Markets — Australia · Gulf · Egypt · Turkey · North Africa</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-n count-up" data-target="8" data-suffix="+">8+</div>
+        <div class="stat-l">Years of Experience — Healthcare, Real Estate, Medical Marketing, SEO</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+
+    <!-- Left: philosophy + stats -->
+    <div class="reveal">
+      <p class="tag">My Marketing Philosophy</p>
+      <div class="about-pull-wrap">
+        <blockquote class="about-pull">
+          In a world of brown cows, I help your brand be the <strong>Purple Cow.</strong>
+        </blockquote>
+      </div>
+      <div class="about-stats">
+        <div class="ast"><div class="ast-v">8+</div><div class="ast-l">Years Experience</div></div>
+        <div class="ast"><div class="ast-v">5+</div><div class="ast-l">International Markets</div></div>
+        <div class="ast"><div class="ast-v">2</div><div class="ast-l">Languages: Arabic + English</div></div>
+        <div class="ast"><div class="ast-v">CIM</div><div class="ast-l">UK Diploma Certified</div></div>
+      </div>
+    </div>
+
+    <!-- Right: story -->
+    <div class="about-story reveal">
+      <p class="tag">My Story</p>
+      <h2 class="h2s" style="margin-bottom:1.5rem">From Pharmacist<br>to Brand Architect</h2>
+      <p>My career began in a white coat. As a licensed pharmacist and then a product specialist at Abbott Nutrition, I spent years studying how people think, what they respond to, and why they make decisions. That foundation in human behavior is what separates my marketing from the generic kind.</p>
+      <p>When I moved into digital marketing, I brought that same clinical precision to content strategy. At advertising agencies and global healthcare brands, I learned that great marketing is not about posting more — it's about understanding your audience at a level most marketers never reach.</p>
+      <p>Today, managing social media for Australian healthcare clinics, real estate brands across Turkey and the Gulf, and medical practices in UAE and KSA, I combine strategic thinking with creative execution to build brands people actually remember. Backed by the CIM Diploma — the UK's gold standard for marketing professionals — and driven by data I know how to read and act on.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY STRIP -->
+<section id="why">
+  <div class="why-inner">
+    <div class="wi reveal">
+      <div class="wi-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+      <div class="wi-t">Bilingual Reach</div>
+      <div class="wi-d">Native-level copywriting in Arabic and English — built for Gulf, MENA, and global audiences.</div>
+    </div>
+    <div class="wi reveal">
+      <div class="wi-ico"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+      <div class="wi-t">Healthcare Compliance</div>
+      <div class="wi-d">AHPRA-compliant strategy for Australian clinics — a rare specialty in social media management.</div>
+    </div>
+    <div class="wi reveal">
+      <div class="wi-ico"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <div class="wi-t">Data-Driven Decisions</div>
+      <div class="wi-d">Weekly and monthly analytics reporting. Every strategy is backed by performance data, not guesswork.</div>
+    </div>
+    <div class="wi reveal">
+      <div class="wi-ico"><svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div>
+      <div class="wi-t">Multi-Market Experience</div>
+      <div class="wi-d">Real results across 5 international markets — Australia, Gulf, Egypt, Turkey, North Africa.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="sv-wrap">
+    <div class="sv-head">
+      <div class="reveal">
+        <p class="tag">What I Offer</p>
+        <h2 class="h2s h2s-w">Services Built<br>to Grow Brands</h2>
+      </div>
+      <div class="sv-intro reveal">Every service I offer is tied to a measurable outcome. I don't sell deliverables — I deliver growth, visibility, and brand authority in markets that matter to your business.</div>
+    </div>
+    <div class="sv-grid">
+      <div class="sc reveal">
+        <span class="sc-num">01</span>
+        <div class="sc-ico"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3 class="sc-t">Social Media Strategy & Management</h3>
+        <p class="sc-d">End-to-end management of your brand's social presence — from monthly strategy and content calendars to scheduling, analytics, and performance reporting. I run your platforms while you run your business.</p>
+        <div class="sc-tags"><span class="sc-tag">Facebook</span><span class="sc-tag">Instagram</span><span class="sc-tag">TikTok</span><span class="sc-tag">LinkedIn</span><span class="sc-tag">Google Business</span></div>
+      </div>
+      <div class="sc reveal">
+        <span class="sc-num">02</span>
+        <div class="sc-ico"><svg viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+        <h3 class="sc-t">SEO Content Writing</h3>
+        <p class="sc-d">Long-form articles and website copy that rank on search engines and convert readers into customers. Built on proper keyword research, featured snippet targeting, and natural language that reads like a human wrote it — because one did.</p>
+        <div class="sc-tags"><span class="sc-tag">On-Page SEO</span><span class="sc-tag">Keyword Research</span><span class="sc-tag">Long-Form Articles</span><span class="sc-tag">Ahrefs / SEMrush</span></div>
+      </div>
+      <div class="sc reveal">
+        <span class="sc-num">03</span>
+        <div class="sc-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3 class="sc-t">Digital Campaign Planning</h3>
+        <p class="sc-d">Strategic campaign architecture — competitor analysis, market research, audience targeting, and multi-language content strategy for brands competing in Gulf, North Africa, and global markets.</p>
+        <div class="sc-tags"><span class="sc-tag">Competitor Analysis</span><span class="sc-tag">Market Research</span><span class="sc-tag">Arabic / English / French</span><span class="sc-tag">Gulf & MENA</span></div>
+      </div>
+      <div class="sc reveal">
+        <span class="sc-num">04</span>
+        <div class="sc-ico"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+        <h3 class="sc-t">Brand Voice & Content Creation</h3>
+        <p class="sc-d">Bilingual copywriting, visual content direction, and Reels production — crafted to stop the scroll and position your brand as a credible authority in healthcare, real estate, wellness, and lifestyle markets.</p>
+        <div class="sc-tags"><span class="sc-tag">Bilingual Copy</span><span class="sc-tag">Reels Editing</span><span class="sc-tag">Canva / CapCut</span><span class="sc-tag">Healthcare · Real Estate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="ex-wrap">
+    <div class="reveal">
+      <p class="tag">Work Experience</p>
+      <h2 class="h2s">Results, Not Just Titles</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="ex-list">
+      <div class="ex-row reveal">
+        <div class="ex-line"></div>
+        <div>
+          <div class="ex-num">Aug 2025 — Present</div>
+          <div class="ex-co">Feur Media House</div>
+          <div class="ex-mkt">Australia · Remote</div>
+        </div>
+        <div>
+          <div class="ex-role">Social Media Marketing Manager</div>
+          <p class="ex-d">Managing the complete social media lifecycle for a portfolio of Australian healthcare clinics — from monthly strategy to content production, compliance, and analytics. Achieved a 76.9% increase in total reach and a 90.9% boost in content interactions through a refined strategy and optimized posting cadence. A single IV Vitamin Therapy Reel generated 38.1K organic views with zero ad spend. Maintained AHPRA compliance across all clinic accounts while driving consistent organic growth month over month.</p>
+          <div class="ex-chips"><span class="chip">+76.9% Views</span><span class="chip">+90.9% Interactions</span><span class="chip">+114.3% Link Clicks</span><span class="chip">38.1K Organic Reel</span><span class="chip">AHPRA Compliant</span></div>
+        </div>
+      </div>
+      <div class="ex-row reveal">
+        <div class="ex-line"></div>
+        <div>
+          <div class="ex-num">Aug 2024 — May 2025</div>
+          <div class="ex-co">Yaqota Group</div>
+          <div class="ex-mkt">Turkey · Remote</div>
+        </div>
+        <div>
+          <div class="ex-role">Social Media Marketing Specialist</div>
+          <p class="ex-d">Scaled two real estate brands across Gulf and North Africa using a trilingual content strategy in Arabic, French, and English. Managed Instagram, LinkedIn, Facebook, and Google Business with monthly strategic plans, competitor analysis, and organic content tailored for Algerian, Moroccan, and Tunisian audiences. Delivered measurable organic performance from the first month of engagement.</p>
+          <div class="ex-chips"><span class="chip">Arabic · French · English</span><span class="chip">Gulf + North Africa</span><span class="chip">4 Active Platforms</span></div>
+        </div>
+      </div>
+      <div class="ex-row reveal">
+        <div class="ex-line"></div>
+        <div>
+          <div class="ex-num">Jan 2023 — Jul 2024</div>
+          <div class="ex-co">The Doctor Agency</div>
+          <div class="ex-mkt">Egypt · Hybrid</div>
+        </div>
+        <div>
+          <div class="ex-role">Account Manager</div>
+          <p class="ex-d">Developed marketing content and campaign slogans for medical brands across Egypt, the UAE, and Saudi Arabia. Managed client relationships across multiple concurrent accounts, ensuring campaigns aligned with clinical messaging standards and regional market expectations. Built expertise in healthcare advertising compliance and the nuances of medical marketing across Arab markets.</p>
+          <div class="ex-chips"><span class="chip">Egypt · UAE · KSA</span><span class="chip">Medical Marketing</span></div>
+        </div>
+      </div>
+      <div class="ex-row reveal">
+        <div class="ex-line"></div>
+        <div>
+          <div class="ex-num">Dec 2017 — Aug 2022</div>
+          <div class="ex-co">Abbott Nutrition</div>
+          <div class="ex-mkt">Egypt</div>
+        </div>
+        <div>
+          <div class="ex-role">Senior Marketing Events Specialist → Product Specialist</div>
+          <p class="ex-d">Five years at one of the world's leading healthcare companies, leading consumer educational programs and on-ground marketing activations across oncology, internal medicine, and nutrition. This chapter built the foundation everything else rests on — a deep understanding of how people behave, what they need, and what actually moves them to act. Collaborated cross-functionally across sales, medical affairs, and marketing to align strategy with real consumer insight.</p>
+          <div class="ex-chips"><span class="chip">Consumer Education</span><span class="chip">Brand Activations</span><span class="chip">Oncology · Nutrition</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO TEASER -->
+<section id="portfolio-teaser">
+  <div class="pt-wrap">
+    <div class="reveal">
+      <p class="tag">Case Studies</p>
+      <h2 class="h2s h2s-w">Work That Delivers<br>Measurable Results</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="pt-grid">
+      <div class="pc pfeat reveal" onclick="goPortfolio()">
+        <div class="pc-l">Healthcare Social Media · Australia</div>
+        <div class="pc-t">Scaling Organic Reach for Australian Healthcare Clinics</div>
+        <p class="pc-d">Full social media strategy for a portfolio of Australian healthcare clinics — AHPRA-compliant, community-centric, data-driven. A single IV Vitamin Therapy Reel hit 38.1K views with zero ad spend.</p>
+        <div class="pc-kpis">
+          <div class="kp"><span class="kp-l">Reach Growth</span><span class="kp-v">+76.9%</span></div>
+          <div class="kp"><span class="kp-l">Interactions</span><span class="kp-v">+90.9%</span></div>
+          <div class="kp"><span class="kp-l">Link Click Rate</span><span class="kp-v">+114.3%</span></div>
+          <div class="kp"><span class="kp-l">Reel Views</span><span class="kp-v">38.1K</span></div>
+        </div>
+        <div class="pc-bg">01</div>
+      </div>
+      <div class="pc reveal" onclick="goPortfolio()">
+        <div class="pc-l">Real Estate · Turkey / Gulf / MENA</div>
+        <div class="pc-t">Trilingual Real Estate Brand Growth</div>
+        <p class="pc-d">Social presence for Yaqota Group across Gulf and North African audiences in Arabic, French, and English — monthly strategy, Reels, carousels, and LinkedIn.</p>
+        <div class="pc-kpis">
+          <div class="kp"><span class="kp-l">Languages</span><span class="kp-v">AR / FR / EN</span></div>
+          <div class="kp"><span class="kp-l">Active Platforms</span><span class="kp-v">4</span></div>
+        </div>
+        <div class="pc-bg">02</div>
+      </div>
+      <div class="pc reveal" onclick="goPortfolio()">
+        <div class="pc-l">Medical Marketing · Gulf</div>
+        <div class="pc-t">Personal Brand Strategy for Gulf Dermatologists</div>
+        <p class="pc-d">Positioned two Egyptian dermatologists in Saudi and UAE markets — premium personal branding, before/after case content, and localized hashtag strategy per market.</p>
+        <div class="pc-kpis">
+          <div class="kp"><span class="kp-l">Markets</span><span class="kp-v">KSA + UAE</span></div>
+          <div class="kp"><span class="kp-l">Channels</span><span class="kp-v">IG · Snapchat</span></div>
+        </div>
+        <div class="pc-bg">03</div>
+      </div>
+    </div>
+    <div class="pt-cta reveal">
+      <button class="btn-gold" onclick="goPortfolio()">View Full Portfolio</button>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="sk-wrap">
+    <div class="reveal">
+      <p class="tag">Skills & Tools</p>
+      <h2 class="h2s">The Toolkit Behind<br>the Strategy</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="sk-grid">
+      <div class="sg reveal">
+        <div class="sg-t">Marketing & Strategy</div>
+        <div class="sg-l">
+          <div class="si">Social Media Strategy</div>
+          <div class="si">Content Strategy</div>
+          <div class="si">SEO Content Writing</div>
+          <div class="si">Competitor Analysis</div>
+          <div class="si">Campaign Planning</div>
+          <div class="si">Brand Positioning</div>
+          <div class="si">Bilingual Copywriting</div>
+          <div class="si">Analytics & Reporting</div>
+        </div>
+      </div>
+      <div class="sg reveal">
+        <div class="sg-t">Platforms & Channels</div>
+        <div class="sg-l">
+          <div class="si">Instagram & Facebook</div>
+          <div class="si">TikTok</div>
+          <div class="si">LinkedIn</div>
+          <div class="si">Snapchat</div>
+          <div class="si">Google Business</div>
+          <div class="si">Meta Business Suite</div>
+          <div class="si">TikTok Creative Center</div>
+        </div>
+      </div>
+      <div class="sg reveal">
+        <div class="sg-t">SEO & Analytics</div>
+        <div class="sg-l">
+          <div class="si">Google Analytics</div>
+          <div class="si">Ahrefs</div>
+          <div class="si">SEMrush</div>
+          <div class="si">Yoast SEO</div>
+          <div class="si">Keyword Research</div>
+          <div class="si">Birdeye</div>
+          <div class="si">Zoho Social</div>
+        </div>
+      </div>
+      <div class="sg reveal">
+        <div class="sg-t">Creative & AI Tools</div>
+        <div class="sg-l">
+          <div class="si">Canva</div>
+          <div class="si">CapCut</div>
+          <div class="si">Adobe Premiere Pro</div>
+          <div class="si">ChatGPT & Gemini</div>
+          <div class="si">Midjourney</div>
+          <div class="si">Claude AI</div>
+          <div class="si">Notion</div>
+          <div class="si">Zoho Projects</div>
+        </div>
+      </div>
+    </div>
+    <div class="certs reveal">
+      <span class="cert">Arabic (Native)</span>
+      <span class="cert">English (Fluent)</span>
+      <span class="cert">CIM Diploma — UK</span>
+      <span class="cert">Udacity Digital Marketing Nanodegree</span>
+      <span class="cert">ALX AI Career Essentials</span>
+      <span class="cert">Google Digital Skills for Africa</span>
+      <span class="cert">AHPRA Compliance</span>
+      <span class="cert">Healthcare Marketing</span>
+      <span class="cert">Real Estate Marketing</span>
+      <span class="cert">Remote Team Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="ct-wrap reveal">
+    <p class="tag tag-c">Ready to Start</p>
+    <h2 class="ct-h">Your Brand Deserves<br>to Be Remembered</h2>
+    <p class="ct-sub">Whether you're a healthcare clinic that needs compliant, growth-driven social media management, a real estate brand targeting Gulf and MENA audiences, or a business that needs SEO content that actually ranks — let's talk.</p>
+    <div class="ct-links">
+      <a href="mailto:shereen.ashraf25@gmail.com" class="cl">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        shereen.ashraf25@gmail.com
+      </a>
+      <a href="https://www.linkedin.com/in/shereen-ashraf-marketing" target="_blank" rel="noopener" class="cl">
+        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        linkedin.com/in/shereen-ashraf-marketing
+      </a>
+    </div>
+    <div class="ct-btns">
+      <a href="mailto:shereen.ashraf25@gmail.com" class="btn-gold">Hire Me</a>
+      <a href="https://www.linkedin.com/in/shereen-ashraf-marketing" target="_blank" rel="noopener" class="btn-ghost">Connect on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-name" onclick="goMain()">Shereen Ashraf Ali</span>
+  <span class="footer-role">Social Media Strategist · SEO Content Writer · Digital Marketer</span>
+  <nav class="footer-nav">
+    <button onclick="goMain();goSec('about')">About</button>
+    <button onclick="goMain();goSec('services')">Services</button>
+    <button onclick="goPortfolio()">Portfolio</button>
+    <button onclick="goMain();goSec('contact')">Contact</button>
+  </nav>
+</footer>
+</div><!-- /main-page -->
+
+<!-- ══════════════════════════════════════
+     PORTFOLIO PAGE
+     ══════════════════════════════════════ -->
+<div id="portfolio-page" class="page">
+
+<div class="pp-nav">
+  <button class="pp-back" onclick="goMain()">
+    <svg viewBox="0 0 24 24"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+    Back to Home
+  </button>
+  <span class="pp-brand">Shereen Ashraf Ali</span>
+  <a href="https://drive.google.com/file/d/1r5emJbQPsjVd2BugYhhuMX4YHl0_DhHQ/view?usp=sharing" target="_blank" rel="noopener" class="pp-pdf">
+    Open Full PDF
+    <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+  </a>
+</div>
+
+<div class="pp-hero">
+  <p class="tag tag-c" style="margin-bottom:.8rem">Selected Work</p>
+  <h1 class="pp-hero-h">A Portfolio Built on<br><em>Real Results</em></h1>
+  <p class="pp-hero-sub">8 years. 5 markets. Healthcare, real estate, medical beauty, and SEO content — all backed by strategy, data, and a deep understanding of what each market responds to.</p>
+</div>
+
+<!-- Case 1 -->
+<div class="pad-s">
+  <p class="pp-tag">01 — Healthcare Social Media</p>
+  <h2 class="pp-h2">Feur Media House — Australia</h2>
+</div>
+<div class="pad-b">
+  <div class="cs">
+    <div class="cs-hd">
+      <div>
+        <div class="cs-lbl">Healthcare · Social Media Strategy · Australia · Remote</div>
+        <div class="cs-title">End-to-End Management for Australian Healthcare Clinic Portfolio</div>
+        <div class="cs-mkt">Clinics: Muswellbrook Doctors · Cranbourne MC · Botanic Ridge Doctors · Bethania Doctors · Rutherford Doctors</div>
+      </div>
+      <div class="cs-kpis">
+        <div class="kb"><div class="kb-v">+76.9%</div><div class="kb-l">Total Views</div></div>
+        <div class="kb"><div class="kb-v">+90.9%</div><div class="kb-l">Interactions</div></div>
+        <div class="kb"><div class="kb-v">+114.3%</div><div class="kb-l">Link Clicks</div></div>
+        <div class="kb"><div class="kb-v">38.1K</div><div class="kb-l">Organic Reel</div></div>
+      </div>
+    </div>
+    <div class="cs-bd">
+      <p class="cs-obj">Objective: Grow organic reach, engagement, and patient trust for a portfolio of Australian GP and specialty clinics — within strict AHPRA compliance requirements.</p>
+      <p class="cs-copy">Managed the complete social media lifecycle from monthly strategy to publishing and reporting. A single IV Vitamin Therapy Reel generated 38.1K organic views without any ad spend, demonstrating the power of choosing the right content format for the right audience. Across the portfolio, a refined content strategy combining optimized post timing and creative hooks drove a 76.9% increase in total reach, a 90.9% boost in content interactions, and more than doubled the link click rate. Managed Facebook, Instagram, LinkedIn, TikTok, and Google Business accounts using Zoho Social and Birdeye. Maintained strict AHPRA compliance while testing new formats and introducing community-centric content tailored to each clinic.</p>
+      <div class="cs-tags">
+        <span class="cstag">AHPRA Compliance</span><span class="cstag">Zoho Social</span><span class="cstag">Birdeye</span>
+        <span class="cstag">Reels Strategy</span><span class="cstag">Community Content</span><span class="cstag">Analytics Reporting</span>
+        <span class="cstag">Facebook · Instagram · LinkedIn · TikTok · GMB</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case 2 -->
+<div class="pad-s" style="margin-top:2.5rem">
+  <p class="pp-tag">02 — Real Estate Social Media</p>
+  <h2 class="pp-h2">Yaqota Group — Turkey / Gulf / North Africa</h2>
+</div>
+<div class="pad-b">
+  <div class="cs">
+    <div class="cs-hd">
+      <div>
+        <div class="cs-lbl">Real Estate · Trilingual Strategy · Turkey · Remote</div>
+        <div class="cs-title">Building Cross-Market Real Estate Brand Presence Across Three Languages</div>
+        <div class="cs-mkt">Markets: Gulf · North Africa (Algeria, Morocco, Tunisia) · International Arab Clients</div>
+      </div>
+      <div class="cs-kpis">
+        <div class="kb"><div class="kb-v">3</div><div class="kb-l">Languages</div></div>
+        <div class="kb"><div class="kb-v">4</div><div class="kb-l">Platforms</div></div>
+        <div class="kb"><div class="kb-v">2</div><div class="kb-l">Brands</div></div>
+      </div>
+    </div>
+    <div class="cs-bd">
+      <p class="cs-obj">Objective: Build social media presence for two real estate companies targeting Arab clients across Gulf and North Africa, with localized content for Algerian, Moroccan, and Tunisian audiences.</p>
+      <p class="cs-copy">Managed social media for Yaqota Group — a real estate company based in Istanbul targeting a majority Arab audience worldwide. Developed a trilingual content strategy in Arabic, French, and English, with customized posts adapting tone and messaging for different North African markets. Managed active platforms including Instagram, LinkedIn, Facebook, and Google Business with monthly strategic plans, competitor analysis, organic content scheduling, and reporting. Produced Reels, carousels, and LinkedIn thought leadership content using Notion for planning and Discord for remote team coordination.</p>
+      <div class="cs-tags">
+        <span class="cstag">Arabic</span><span class="cstag">French</span><span class="cstag">English</span>
+        <span class="cstag">Real Estate</span><span class="cstag">Reels</span><span class="cstag">Carousels</span>
+        <span class="cstag">Competitor Analysis</span><span class="cstag">Notion · Discord</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case 3 -->
+<div class="pad-s" style="margin-top:2.5rem">
+  <p class="pp-tag">03 — Medical Marketing · Gulf</p>
+  <h2 class="pp-h2">Dermatology Clinic Branding — KSA & UAE</h2>
+</div>
+<div class="pad-b">
+  <div class="two-col">
+    <div class="cs">
+      <div class="cs-hd" style="border-bottom:none;padding-bottom:0">
+        <div>
+          <div class="cs-lbl">Medical Personal Branding · Saudi Arabia</div>
+          <div class="cs-title">Dermatologist Personal Brand — Saudi Market</div>
+        </div>
+      </div>
+      <div class="cs-bd" style="padding-top:1rem">
+        <p class="cs-copy">An Egyptian dermatologist working in Saudi Arabia needed a social media presence that matched Gulf aesthetic expectations. Managed Instagram and Snapchat with medical content localized for the Saudi market. Strategy focused on before-and-after case posts, consistent credential-forward copy, and localized hashtag strategy per content piece.</p>
+        <div class="cs-tags"><span class="cstag">Instagram</span><span class="cstag">Snapchat</span><span class="cstag">Saudi Market</span><span class="cstag">Before/After Content</span></div>
+      </div>
+    </div>
+    <div class="cs">
+      <div class="cs-hd" style="border-bottom:none;padding-bottom:0">
+        <div>
+          <div class="cs-lbl">Medical Personal Branding · UAE · Slogan: "Flawless You"</div>
+          <div class="cs-title">Premium Dermatologist Branding — UAE Market</div>
+        </div>
+      </div>
+      <div class="cs-bd" style="padding-top:1rem">
+        <p class="cs-copy">An Egyptian dermatologist with 14 years of experience in UAE aesthetic dermatology wanted a premium personal brand. Developed a complete brand identity including the slogan "Flawless You," curated a premium color palette, and built an elegant content strategy. English TOV with Arabic phrases, case posts in carousel format, daily manual stories, and 3 awareness posts monthly.</p>
+        <div class="cs-tags"><span class="cstag">Instagram</span><span class="cstag">UAE Market</span><span class="cstag">Brand Identity</span><span class="cstag">Carousel Posts</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case 4 -->
+<div class="pad-s" style="margin-top:2.5rem">
+  <p class="pp-tag">04 — Medical Beauty · Egypt</p>
+  <h2 class="pp-h2">BEAUTIVA Medical Center — Trend Campaign</h2>
+</div>
+<div class="pad-b">
+  <div class="cs">
+    <div class="cs-hd">
+      <div>
+        <div class="cs-lbl">Medical Beauty · Trend Campaign · Egypt</div>
+        <div class="cs-title">90s-Themed Social Media Campaign — Multi-Service Medical Center</div>
+        <div class="cs-mkt">Team: Art Director + Graphic Designer + Social Media Manager</div>
+      </div>
+      <div class="cs-kpis">
+        <div class="kb"><div class="kb-v">1</div><div class="kb-l">Hashtag</div></div>
+        <div class="kb"><div class="kb-v">3</div><div class="kb-l">Albums</div></div>
+        <div class="kb"><div class="kb-v">Organic</div><div class="kb-l">Reach</div></div>
+      </div>
+    </div>
+    <div class="cs-bd">
+      <p class="cs-obj">Objective: Create a trend-driven campaign to drive reservations across multiple medical beauty services using a casual, culturally resonant 90s aesthetic.</p>
+      <p class="cs-copy">Led a full campaign execution with a 90s casual tone of voice. Used a single unifying hashtag for brand recall, produced three service album posts, seasonal exclusive offers, and direct reservation CTAs. Collaborated with an art director and graphic designer to execute a visually unified campaign that achieved measurable organic reach and was built to convert engagement directly into booking inquiries.</p>
+      <div class="cs-tags">
+        <span class="cstag">Trend Campaign</span><span class="cstag">90s TOV</span><span class="cstag">Seasonal Offers</span>
+        <span class="cstag">Direct CTA</span><span class="cstag">Team Coordination</span><span class="cstag">Organic Reach</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case 5: SEO -->
+<div class="pad-s" style="margin-top:2.5rem">
+  <p class="pp-tag">05 — SEO Content Writing</p>
+  <h2 class="pp-h2">Amaly Natural Store — Gulf & Global Market</h2>
+</div>
+<div class="pad-b">
+  <div class="seo-2">
+    <div class="seo-c">
+      <div class="cs-lbl" style="margin-bottom:.5rem">Content Strategy</div>
+      <div class="seo-t">Article Architecture That Ranks</div>
+      <p class="seo-d">Developed long-form SEO articles (2000+ words) for Amaly Store — an essential oils, perfume, and massage oil brand targeting Gulf and global audiences. Every article was structured with H1/H2/H4 headings and a table of contents designed to trigger SERP site link extensions, with keyword density maintained at 1.5% for maximum ranking potential without keyword stuffing.</p>
+    </div>
+    <div class="seo-c">
+      <div class="cs-lbl" style="margin-bottom:.5rem">Audience & Execution</div>
+      <div class="seo-t">Natural Voice, Real Rankings</div>
+      <p class="seo-d">Target audience spanned adults, patients using essential oils therapeutically, beauty and medical business owners, natural product enthusiasts, mothers using oils for children, and athletes with joint pain. All content was written to sound naturally human — not keyword-heavy, not AI-generated — to meet both user expectations and search engine quality standards.</p>
+    </div>
+  </div>
+  <div class="cs" style="margin-top:1px">
+    <div class="cs-bd">
+      <p class="cs-obj">SEO Guidelines Applied: 2000+ word minimum · H1/H2/H4 structure · Table of contents for SERP site links · 1.5% keyword density · Natural human tone · On-page SEO throughout</p>
+      <div class="cs-tags">
+        <span class="cstag">On-Page SEO</span><span class="cstag">Keyword Research</span><span class="cstag">Long-Form Content</span>
+        <span class="cstag">Essential Oils / Wellness</span><span class="cstag">Gulf + Global Audience</span>
+        <span class="cstag">SERP Feature Targeting</span><span class="cstag">Yoast</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Case 6: Reels -->
+<div class="pad-s" style="margin-top:2.5rem">
+  <p class="pp-tag">06 — Content Creation</p>
+  <h2 class="pp-h2">Reels Editing & Short-Form Video</h2>
+</div>
+<div class="pad-b" style="padding-bottom:0">
+  <div class="reel-3">
+    <div class="reel-c">
+      <div class="reel-ico"><svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
+      <p class="reel-l">Instagram Reels — Healthcare clinics, lifestyle content, and patient education using CapCut.</p>
+    </div>
+    <div class="reel-c">
+      <div class="reel-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div>
+      <p class="reel-l">TikTok Videos — Podcast promotion reels and trend-aligned content with platform-native hooks.</p>
+    </div>
+    <div class="reel-c">
+      <div class="reel-ico"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+      <p class="reel-l">Snapchat Stories — Medical content for dermatology clients targeting the Gulf market.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pp-cta-block" style="margin-top:4rem">
+  <h2 class="pp-cta-h">Ready to See What's Possible for Your Brand?</h2>
+  <p class="pp-cta-d">Every project above started with a strategy session. Yours can too.<br>View the full portfolio PDF or reach out directly to discuss your project.</p>
+  <div class="pp-cta-btns">
+    <a href="https://drive.google.com/file/d/1r5emJbQPsjVd2BugYhhuMX4YHl0_DhHQ/view?usp=sharing" target="_blank" rel="noopener" class="btn-gold">Open Full Portfolio PDF</a>
+    <a href="mailto:shereen.ashraf25@gmail.com" class="btn-ghost">Get in Touch</a>
+    <button class="btn-ghost" onclick="goMain();goSec('contact')">Back to Home</button>
+  </div>
+</div>
+
+</div><!-- /portfolio-page -->
+
+<script>
+/* ── PAGE NAVIGATION ── */
+function goMain(){
+  document.getElementById('main-page').classList.add('active');
+  document.getElementById('portfolio-page').classList.remove('active');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function goPortfolio(){
+  document.getElementById('main-page').classList.remove('active');
+  document.getElementById('portfolio-page').classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+}
+function goSec(id){
+  const t=setTimeout(()=>{
+    const el=document.getElementById(id);
+    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  },80);
+}
+
+/* ── NAV SCROLL STATE ── */
+const nav=document.getElementById('siteNav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('stuck',window.scrollY>60);
+},{passive:true});
+// Also apply on load
+nav.classList.toggle('stuck',window.scrollY>60);
+
+/* ── BURGER MENU ── */
+const burger=document.getElementById('burger');
+const menu=document.getElementById('navMenu');
+burger.addEventListener('click',()=>{
+  const open=menu.classList.toggle('open');
+  const [s0,s1,s2]=burger.querySelectorAll('span');
+  s0.style.transform=open?'rotate(45deg) translate(4px,5px)':'';
+  s1.style.opacity=open?'0':'';
+  s2.style.transform=open?'rotate(-45deg) translate(4px,-5px)':'';
+});
+menu.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('click',()=>{
+    menu.classList.remove('open');
+    burger.querySelectorAll('span').forEach(s=>{
+      s.style.transform='';s.style.opacity='';
+    });
+  });
+});
+
+/* ── SCROLL REVEAL with stagger ── */
+const revObs=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('vis'), e.target.dataset.delay||0);
+    }
+  });
+},{threshold:0.07,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  const siblings=[...el.parentNode.querySelectorAll('.reveal')];
+  const idx=siblings.indexOf(el);
+  el.dataset.delay=idx*90;
+  revObs.observe(el);
+});
+
+/* ── CUSTOM CURSOR ── */
+const dot=document.getElementById('cursorDot');
+const ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;dot.style.left=mx+'px';dot.style.top=my+'px';});
+(function animCursor(){
+  rx+=(mx-rx)*.14;ry+=(my-ry)*.14;
+  ring.style.left=rx+'px';ring.style.top=ry+'px';
+  requestAnimationFrame(animCursor);
+})();
+document.querySelectorAll('a,button,.pc,.sc,.sg,.wi,.ast').forEach(el=>{
+  el.addEventListener('mouseenter',()=>ring.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>ring.classList.remove('hov'));
+});
+
+/* ── COUNT-UP NUMBERS ── */
+function countUp(el){
+  const target=parseFloat(el.dataset.target);
+  const prefix=el.dataset.prefix||'';
+  const suffix=el.dataset.suffix||'';
+  const dec=String(target).includes('.')?1:0;
+  const dur=1800;const step=16;
+  let cur=0;
+  const inc=target/(dur/step);
+  const timer=setInterval(()=>{
+    cur=Math.min(cur+inc,target);
+    el.textContent=prefix+cur.toFixed(dec)+suffix;
+    if(cur>=target)clearInterval(timer);
+  },step);
+}
+const countObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting&&!e.target.dataset.counted){
+      e.target.dataset.counted='1';
+      countUp(e.target);
+    }
+  });
+},{threshold:0.5});
+document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
+
+/* ── MAGNETIC CTA ── */
+document.querySelectorAll('.btn-p,.btn-gold').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const x=(e.clientX-r.left-r.width/2)*.28;
+    const y=(e.clientY-r.top-r.height/2)*.28;
+    btn.style.transform=`translate(${x}px,${y}px)`;
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+});
+
+/* ── PARALLAX HERO MONO ── */
+const mono=document.querySelector('.hero-mono');
+if(mono){
+  window.addEventListener('scroll',()=>{
+    mono.style.transform=`translateY(${window.scrollY*.12}px)`;
+  },{passive:true});
+}
+
+/* ── SECTION PROGRESS LINE ── */
+const progLine=document.createElement('div');
+progLine.style.cssText='position:fixed;top:0;left:0;height:1.5px;background:linear-gradient(to right,var(--burg),var(--gold));z-index:9999;width:0;transition:width .1s linear;pointer-events:none';
+document.body.prepend(progLine);
+window.addEventListener('scroll',()=>{
+  const pct=(window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+  progLine.style.width=pct+'%';
+},{passive:true});
+</script>
+</body>
+</html>
